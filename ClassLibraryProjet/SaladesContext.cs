@@ -20,5 +20,10 @@ namespace ClassLibraryProjet
         public System.Data.Entity.DbSet<ClassLibraryProjet.Fabricant> Fabricants { get; set; }
 
         public System.Data.Entity.DbSet<ClassLibraryProjet.Magasin> Magasins { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

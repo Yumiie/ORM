@@ -9,6 +9,11 @@ namespace ClassLibraryProjet
 {
     public class Magasin
     {
+        public Magasin()
+        {
+            this.Salades = new HashSet<Salade>();
+        }
+
         [Key]
         public int ID { get; set; }
 

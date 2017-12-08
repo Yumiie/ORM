@@ -55,7 +55,9 @@ namespace WebApplicationProjet.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View(salade);
+            ViewBag.Fabricant = new SelectList(db.Fabricants, "ID", "Nom");
+
+            return View();
         }
 
         // GET: Salades/Edit/5
