@@ -38,6 +38,8 @@ namespace WebApplicationProjet.Controllers
         // GET: Salades/Create
         public ActionResult Create()
         {
+            ViewBag.Fabricant = new SelectList(db.Fabricants, "ID", "Nom");
+
             return View();
         }
 
@@ -55,7 +57,7 @@ namespace WebApplicationProjet.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Fabricant = new SelectList(db.Fabricants, "ID", "Nom");
+            ViewBag.Fabricant = new SelectList(db.Fabricants, "Fabricant_ID", "Fabricant_Nom");
 
             return View();
         }
